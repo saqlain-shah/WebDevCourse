@@ -4,12 +4,12 @@ x = -x;
 console.log( x ); // -1, unary negation was applied
 let d = 1, y = 3;
 console.log( y - d ); // 2, binary minus subtracts values
-let s="Shamdun"+"Travel";
-console.log(s);
+let name="Shamdun"+"Travel";
+console.log(name);
 console.log('1' +1);
-let t = 2 * 2 + 1;
+let output = 2 * 2 + 1;
 
-console.log( t ); // 5
+console.log( output ); // 5
 let n = 2;
 n = n + 5;
 n = n * 2;
