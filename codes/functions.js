@@ -1,9 +1,13 @@
 // Function to print trainees' names
 function printTrainees(names) {
   console.log("Trainees: ");
-  for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-  }
+  // for (let i = 0; i < names.length; i++) {
+  //   console.log(names[i]);
+  // }
+  names.forEach(name => {
+    console.log(name);
+    
+  });
 }
 
 // Function to check if a name is in the trainees list
