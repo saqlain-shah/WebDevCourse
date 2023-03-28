@@ -9,9 +9,9 @@ function printTrainees(names) {
     
   });
 }
-function showList(names){
+function showList(list){
   console.log("LIST OF ARRAY");
-  names.filter(function(name){
+  list.filter(function(name){
      console.log(name);
   
 
