@@ -4,10 +4,16 @@ function printTrainees(names) {
   // for (let i = 0; i < names.length; i++) {
   //   console.log(names[i]);
   // }
-  names.forEach(element => {
-    console.log(element);
+  // names.forEach(element => {
+  //   console.log(element);
     
-  });}
+  // });
+  names.filter(function(name){
+console.log(name);
+  });
+
+}
+
   
 
 
