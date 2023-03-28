@@ -4,9 +4,17 @@ function printTrainees(names) {
   // for (let i = 0; i < names.length; i++) {
   //   console.log(names[i]);
   // }
-  names.forEach(name => {
-    console.log(name);
+  names.forEach(element => {
+    console.log(element);
     
+  });
+}
+function showList(names){
+  console.log("LIST OF ARRAY");
+  names.filter(function(name){
+     console.log(name);
+  
+
   });
 }
 
@@ -47,6 +55,7 @@ let traineesList = [
 addTrainee("Zaaakkr", traineesList);
 isTrainee("zakir", traineesList);
 printTrainees(traineesList);
+showList(traineesList);
 
 
 // addTrainee("zakir", traineesList);
