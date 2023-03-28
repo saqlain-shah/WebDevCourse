@@ -39,5 +39,7 @@ let traineesList = [
 ];
 
 printTrainees(traineesList);
+
 isTrainee("Shehbaz", traineesList);
 addTrainee("Ali", traineesList);
+
