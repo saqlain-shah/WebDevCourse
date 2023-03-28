@@ -18,8 +18,11 @@ function isTrainee(name, names) {
 
 // Function to add a new trainee
 function addTrainee(name, names) {
-  names.push(name);
-  console.log(name + " added to the trainees list.");
+  if (names.includes(name)){
+    return console.log(name + "name is already exist")
+  }
+  names.unshift(name);
+  return console.log(name + " added to the trainees list.");
 }
 
 // Example usage
@@ -38,6 +41,7 @@ let traineesList = [
   "tehzeeb",
 ];
 
+
+isTrainee("iqbal", traineesList);
+addTrainee("iqbal", traineesList);
 printTrainees(traineesList);
-isTrainee("Javed", traineesList);
-addTrainee("Iqbal", traineesList);
