@@ -39,5 +39,5 @@ let traineesList = [
 ];
 
 printTrainees(traineesList);
-isTrainee("Saqlain", traineesList);
-addTrainee("Syed", traineesList);
+isTrainee("Tehzeeb", traineesList);
+addTrainee("Hassan", traineesList);
