@@ -1,0 +1,58 @@
+js classes
+
+js string methods**********
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+
+JavaScript Search Methods
+String indexOf()
+String lastIndexOf()
+String search()
+String match()
+String matchAll()
+String includes()
+String startsWith()
+String endsWith()
+
+Synonyms:
+
+Template Literals
+Template Strings
+String Templates
+Back-Tics Syntax
+
+JavaScript Number Methods
+These number methods can be used on all JavaScript numbers:
+
+Method	Description
+toString()	Returns a number as a string
+toExponential()	Returns a number written in exponential notation
+toFixed()	Returns a number written with a number of decimals
+toPrecision()	Returns a number written with a specified length
+ValueOf()	Returns a number as a number
+
+JavaScript Number Properties
+Property	Description
+EPSILON	The difference between 1 and the smallest number > 1.
+MAX_VALUE	The largest number possible in JavaScript
+MIN_VALUE	The smallest number possible in JavaScript
+MAX_SAFE_INTEGER	The maximum safe integer (253 - 1)
+MIN_SAFE_INTEGER	The minimum safe integer -(253 - 1)
+POSITIVE_INFINITY	Infinity (returned on overflow)
+NEGATIVE_INFINITY	Negative infinity (returned on overflow)
+NaN	A "Not-a-Number" value

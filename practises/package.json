@@ -1,0 +1,21 @@
+{
+  "name": "reactwthsirsaqlain",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+
+  "main": "Module2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakiransari003/MERN-Stack-Development.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakiransari003/MERN-Stack-Development/issues"
+  },
+  "homepage": "https://github.com/zakiransari003/MERN-Stack-Development#readme"
+}
