@@ -1,9 +1,13 @@
 // Function to print trainees' names
 function printTrainees(names) {
   console.log("Trainees: ");
-  for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-  }
+  // for (let i = 0; i < names.length; i++) {
+  //   console.log(names[i]);
+  // }
+  names.forEach(name => {
+    console.log(name);
+    
+  });
 }
 
 // Function to check if a name is in the trainees list
@@ -18,8 +22,11 @@ function isTrainee(name, names) {
 
 // Function to add a new trainee
 function addTrainee(name, names) {
-  names.push(name);
-  console.log(name + " added to the trainees list.");
+  if (names.includes(name)){
+   return console.log(name + "name is already in the listtt");
+  }
+  names.unshift(name); // to add the name in beginning of an array list.
+  console.log(name + " added to the trainees listtttt.");
 }
 
 // Example usage
@@ -37,7 +44,10 @@ let traineesList = [
   "javed",
   "tehzeeb",
 ];
-
+addTrainee("Zaaakkr", traineesList);
+isTrainee("zakir", traineesList);
 printTrainees(traineesList);
-isTrainee("Zakir", traineesList);
-addTrainee("Ansari", traineesList);
+
+
+// addTrainee("zakir", traineesList);
+
