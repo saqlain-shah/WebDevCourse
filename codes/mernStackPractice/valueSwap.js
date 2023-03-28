@@ -2,14 +2,14 @@ function showMessage() {
     console.log( 'Hello everyone!' );
   }
   showMessage();
-  let a="ali";
-  let b=2;
-  if(a===b)
+  let name="ali";
+  let number=2;
+  if(name===number)
   {
     console.log("value are identical ")
   }
 else {
- console.log("value are notidentical ")
+ console.log("value are not identical ")
 }
  let x=4;
   let y=2;
@@ -20,18 +20,18 @@ else {
 else {
  console.log("Numbers are not equal  ")
 }
-let c=2;
-let d= 4;
-if(c!==d){
+let num1=2;
+let num2= 4;
+if(num1!==num2){
   console.log(true)
 }
 else{
   console.log(false);
 }
-let t=3;
-let u=5;
-let i=t+u;
-console.log("The sum of 5 and 3 is "+i);
+let val1=3;
+let val2=5;
+let output=val1+val2;
+console.log(`The sum of ${val1} and ${val2} is` +output);
 let f = 5;
 let h = 2;
 let k = f % h;
