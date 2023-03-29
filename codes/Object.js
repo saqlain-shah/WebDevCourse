@@ -7,6 +7,8 @@ let Bio={
 } 
 console.log(`Your whole Bio :`,Bio);
 console.log(`Your Intrest in `,Bio.Intrest);
+let jasonformat=JSON.stringify(Bio);
+console.log(jasonformat);
 
 // Object Constructor
 // function MyInfo(name,age,Intrest){
