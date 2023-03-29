@@ -40,6 +40,5 @@ function addTrainee(name, names) {
 
 let naam = "Abbas";
 printTrainees(traineesList);
-isTrainee("Saqlain", traineesList);
-addTrainee(naam, traineesList);
-printTrainees(traineesList);
+isTrainee("Shehbaz", traineesList);
+addTrainee("Ali", traineesList);
