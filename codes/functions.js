@@ -1,3 +1,19 @@
+// Example usage
+let traineesList = [
+  "aliya",
+  "malika",
+  "mehmooda",
+  "mudeera",
+  "shahina",
+  "fatima",
+  "qamar",
+  "akbar",
+  "zakir",
+  "shehbaz",
+  "javed",
+  "tehzeeb",
+];
+
 // Function to print trainees' names
 function printTrainees(names) {
   console.log("Trainees: ");
@@ -22,22 +38,8 @@ function addTrainee(name, names) {
   console.log(name + " added to the trainees list.");
 }
 
-// Example usage
-let traineesList = [
-  "aliya",
-  "malika",
-  "mehmooda",
-  "mudeera",
-  "shahina",
-  "fatima",
-  "qamar",
-  "akbar",
-  "zakir",
-  "shehbaz",
-  "javed",
-  "tehzeeb",
-];
-
+let naam = "Abbas";
 printTrainees(traineesList);
 isTrainee("Saqlain", traineesList);
-addTrainee("Syed", traineesList);
+addTrainee(naam, traineesList);
+printTrainees(traineesList);
