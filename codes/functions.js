@@ -9,7 +9,7 @@ function printTrainees(names) {
     
   });
 }
-function showList(list){
+function desireName(list){
   console.log("LIST OF ARRAY");
   list.filter(function(name){
      console.log(name);
@@ -55,7 +55,7 @@ let traineesList = [
 addTrainee("Zaaakkr", traineesList);
 isTrainee("zakir", traineesList);
 printTrainees(traineesList);
-showList(traineesList);
+desireName(traineesList);
 
 
 // addTrainee("zakir", traineesList);
