@@ -31,7 +31,7 @@ else{
 let val1=3;
 let val2=5;
 let output=val1+val2;
-console.log(`The sum of ${val1} and ${val2} is` +output);
+console.log(`The sum of ${val1} and ${val2} is  ` +  output);
 let f = 5;
 let h = 2;
 let k = f % h;
