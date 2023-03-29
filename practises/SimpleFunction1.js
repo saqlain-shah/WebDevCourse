@@ -1,9 +1,9 @@
 // simple function*******
 
 function sum(){
-    let a=12;
-    let b=10;
-    let result=a+b;
+    let math=12;
+    let computer=10;
+    let result=math+computer;
     return result;
 }
 console.log(sum());
