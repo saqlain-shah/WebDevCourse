@@ -2,11 +2,13 @@ import img from './images/bimage.jpg';
 import MyButton from './components/counter';
 import BasicTextFields from "./components/inputField"
 import BoxSx from './components/calculator';
+import List from './components/arrayMap';
 
 function App() {
   return (
 <>
-<div
+<List/>
+{/* <div
 style={{
     display: 'flex',
     alignItems: 'center',
@@ -14,7 +16,7 @@ style={{
      height: '100vh',
     }}>
 <BoxSx/>
-</div>
+</div> */}
 
 </>
 
