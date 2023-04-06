@@ -1,0 +1,73 @@
+.App {
+  text-align: right;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.btn{
+  color:red;
+  background-color: black;
+}
+.jet{
+  height:100px;
+  width:150px;
+}
+.Rinor {
+ background-color: white;
+ color:blue;
+ border:5px solid yellow;
+
+}
+
+.new Button {
+
+  padding:10px;
+  margin:10px;
+  
+}
+.cot{
+
+  background-color: black;
+  color:white;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  border: 2px solid red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  font-size:50px;
+
+   
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
