@@ -1,6 +1,6 @@
 import imageOne from "./../images/ansari.png"
-import imageTwo from "./../images/ansari.png"
-import imageThree from "./../images/ansari.png"
+import imageTwo from "./../images/bgImage.jpg"
+import imageThree from "./../images/bimage.jpg"
 
  const people = [{
     id: 0,
@@ -9,13 +9,15 @@ import imageThree from "./../images/ansari.png"
     Intrest: 'Programming',
     
     imageId: `${imageOne}`
-  }, {
+  }, 
+  {
     id: 1,
     name: 'Zakir Ansari',
     Course: 'MERN Stack',
     Intrest: 'Teaching',
     imageId: `${imageTwo}`
-  }, {
+  },
+   {
     id: 2,
     name: 'Tehzeb Hassan',
     Course: 'MERN Stack',

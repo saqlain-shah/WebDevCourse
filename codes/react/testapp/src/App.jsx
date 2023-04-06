@@ -3,11 +3,13 @@ import MyButton from './components/counter';
 import BasicTextFields from "./components/inputField"
 import BoxSx from './components/calculator';
 import List from './components/arrayMap';
+import TeaSet from './components/props';
 
 function App() {
   return (
 <>
 <List/>
+<TeaSet/>
 {/* <div
 style={{
     display: 'flex',
