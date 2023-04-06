@@ -3,6 +3,7 @@ import './App.css';
 import MyButton from './components/counter'
 import img from './rinologo.PNG'
 import List from './components/printArrayValue';
+import TeaSet from './components/props'
 function App() {
   return (
    
@@ -31,6 +32,7 @@ function App() {
       </header>
      
         <List/>
+        <TeaSet/>
     </div>
   )
  
