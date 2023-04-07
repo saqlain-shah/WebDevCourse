@@ -4,6 +4,7 @@ import MyButton from './components/counter'
 import img from './rinologo.PNG'
 import List from './components/printArrayValue';
 import TeaSet from './components/props'
+import CheckboxesGroup from './components/checkBox'
 function App() {
   return (
    
@@ -33,6 +34,7 @@ function App() {
      
         <List/>
         <TeaSet/>
+        <CheckboxesGroup/>
     </div>
   )
  

@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.nav ul li{
+  float:center;
+}
 .btn{
   color:red;
   background-color: black;

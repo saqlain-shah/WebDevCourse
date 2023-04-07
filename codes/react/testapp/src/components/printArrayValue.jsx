@@ -21,7 +21,7 @@
   
 export default function List() {
   const listItems = people.map(person =>
-    <li key={person.id}>
+    <li  key={person.id}>
       <img
         src={person.imageId}
         alt={person.name}
@@ -39,4 +39,5 @@ export default function List() {
       <ul>{listItems}</ul>
     </article>
   );
+  
 }
