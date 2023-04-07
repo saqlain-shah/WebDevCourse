@@ -1,6 +1,6 @@
-import imageOne from "./../images/ansari.png"
-import imageTwo from "./../images/bgImage.jpg"
-import imageThree from "./../images/bimage.jpg"
+import imageOne from "./../images/img1.png"
+import imageTwo from "./../images/img2.png"
+import imageThree from "./../images/img3.png"
 
  const people = [{
     id: 0,

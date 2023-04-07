@@ -4,12 +4,21 @@ import BasicTextFields from "./components/inputField"
 import BoxSx from './components/calculator';
 import List from './components/arrayMap';
 import TeaSet from './components/props';
+import CheckboxesGroup from './components/checkBox';
 
 function App() {
   return (
 <>
+<div
+style={{
+  display: 'block',
+  float: 'right'
+    }}>
 <List/>
+</div> 
+
 <TeaSet/>
+<CheckboxesGroup/>
 {/* <div
 style={{
     display: 'flex',
