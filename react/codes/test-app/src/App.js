@@ -1,9 +1,8 @@
-import MyButton from "./components/counter";
-
+import CustomForm from "./components/customForm";
 function App() {
   return (
     <>
-      <MyButton />
+      <CustomForm />
     </>
   );
 }
