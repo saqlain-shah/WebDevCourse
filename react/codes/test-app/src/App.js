@@ -1,12 +1,9 @@
-
-import './App.css';
-import List from './components/map';
-import Profile from './components/picture';
+import MyButton from "./components/counter";
 
 function App() {
   return (
     <>
-    <List/>
+      <MyButton />
     </>
   );
 }
