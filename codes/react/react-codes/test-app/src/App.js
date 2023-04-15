@@ -1,12 +1,12 @@
-import BoxSx from "./component/shehbazCalculator";
+import MyButton from "./component/tehzeebCounterfile";
 
 function App() {
 return (
   <>
-<BoxSx />
+  <MyButton />
 
   </>
 
-)
+);
 }
 export default App;
