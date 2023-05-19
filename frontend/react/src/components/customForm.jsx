@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 export default function CustomForm() {
 
-    const [userName, setUserName] = useState("saqlain")
+    const [userName, setUserName] = useState("")
     const [email, setEmail] = useState("")
 
     const handleUserName = (event) => {
@@ -17,6 +17,8 @@ export default function CustomForm() {
     function handleSubmit() {
         alert(`User Name is : ${userName}`);
         alert(`Email is : ${email}`);
+        console.log(`Email is : ${userName}`);
+        console.log(`Email is : ${email}`);
     }
 
     return (
@@ -28,8 +30,11 @@ export default function CustomForm() {
                 variant="outlined"
                 name="userName"
                 value={userName}
-                onChange={handleUserName}
-
+                onChange={(event) => {
+                    setUserName(event.target.value);
+                    //console.log(event.target.value)
+                    console.log(userName)
+                }}
             />
             <TextField
                 id="outlined-basic"
@@ -37,7 +42,10 @@ export default function CustomForm() {
                 variant="outlined"
                 name="email"
                 value={email}
-                onChange={handleEmail}
+                onChange={(e) => {
+                    setEmail(e.target.value);
+                    console.log(email)
+                }}
 
 
             />
