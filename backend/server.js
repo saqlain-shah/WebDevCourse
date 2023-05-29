@@ -1,11 +1,15 @@
-import express from "express";
-import dotenv from "dotenv";
-import cookieParser from "cookie-parser";
-import cors from "cors";
-import mongoose from "mongoose";
+const express =require ("express");
+const dotenv =require ("dotenv");
+const cookieParser= require( "cookie-parser");
+const cors =require("cors");
+const mongoose =require("mongoose");
+const authRoutes = require('../routes/auth');
+
+
 
 const app = express();
 dotenv.config();
+const authRoutes = require('../routes/auth');
 
 const connect = async () => {
   try {
@@ -25,6 +29,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+app.use("/api",rouths)
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
