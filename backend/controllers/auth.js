@@ -1,6 +1,6 @@
-import bcrypt from "bcryptjs";
-import User from "../models/user";
-import { createError } from "../utils/err.js";
+const bcrypt = require("bcryptjs");
+const User = require("../models/user");
+const { createError } = require("../utils/err.js");
 export const signUp = async (req, res, next) => {
   try {
     const salt = bcrypt.genSaltSync(10);
