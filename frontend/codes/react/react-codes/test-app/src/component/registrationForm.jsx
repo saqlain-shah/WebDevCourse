@@ -72,19 +72,16 @@
 //     </form>
 //   );
 // };
-
 // export default RegistrationForm;
-
 import React, { useState } from 'react';
- import { TextField, Button, Container } from '@material-ui/core';
-import { SomeMaterialUIComponent } from '@material-ui/core';
+ import { TextField, Button, Container } from '@mui/material';
 
 const RegistrationForm = () => {
   const [fullName, setFullName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
-
+  
   const handleFullNameChange = (e) => {
     setFullName(e.target.value);
   };

@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
+import auth from './routes/auth';
 
 const app = express();
 dotenv.config();
@@ -25,6 +26,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
+app.use("/api",route)
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
