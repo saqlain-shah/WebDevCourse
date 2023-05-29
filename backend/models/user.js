@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose =requrie ("mongoose");
 const UserSchema = new mongoose.Schema({
     username: {
       type: String,
@@ -25,4 +25,4 @@ const UserSchema = new mongoose.Schema({
   { timestamps: true }
 );
 
-export default mongoose.model("User", UserSchema);
+module.exports= mongoose.model("User", UserSchema);

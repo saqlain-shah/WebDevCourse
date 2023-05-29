@@ -9,6 +9,7 @@ import LoginForm from "./practice/login";
 import SuccessfulMsg from "./practice/successMsg";
 import ColorTextFields from "./practice/textD";
 import FightManagementSystem from "./practice/FMsystem";
+import FlightManagementSystem from "./practice/FMS";
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="successMsg" element={<SuccessfulMsg/>}/>
       <Route path="textD" element={<ColorTextFields/>}/>
       <Route path="FMSYSTEM" element={<FightManagementSystem/>}/>
+      <Route path="FMS" element={<FlightManagementSystem/>}/>
       
      
 
