@@ -1,10 +1,8 @@
-const bcrypt = require("bcryptjs");
-const User = require("../models/user");
-const { createError } = require("../utils/err.js");
-
-const signUp = async (req, res, next) => {
+import bcrypt from "bcryptjs";
+import User from "../models/user.js";
+import { createError } from "../utils/err.js";
+export const signUp = async (req, res, next) => {
   try {
-    console.log(req.body);
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
 
@@ -15,14 +13,12 @@ const signUp = async (req, res, next) => {
 
     await newUser.save();
     res.status(200).send("User has been created.");
-    console.log("User has been created.");
   } catch (err) {
     next(err);
-    console.log("error.");
   }
 };
 
-const signIn = async (req, res, next) => {
+export const SignIn = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) return next(createError(404, "User not found!"));
@@ -30,12 +26,5 @@ const signIn = async (req, res, next) => {
       req.body.password,
       user.password
     );
-
-    // Rest of the code for sign-in functionality
-
-  } catch (error) {
-    // Handle error
-  }
+  } catch (error) {}
 };
-
-module.exports = { signUp, signIn };
