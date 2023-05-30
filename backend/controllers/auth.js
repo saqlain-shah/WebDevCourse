@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import User from "../models/user";
+import User from "../models/user.js";
 import { createError } from "../utils/err.js";
 export const signUp = async (req, res, next) => {
   try {
@@ -22,10 +22,9 @@ export const SignIn = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
     if (!user) return next(createError(404, "User not found!"));
-   const isPasswordCorrect = await bcrypt.compare(
-     req.body.password,
-     user.password
-   );
-
+    const isPasswordCorrect = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
   } catch (error) {}
 };
