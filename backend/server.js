@@ -1,9 +1,9 @@
-const express = require("express");
-const dotenv = require ("dotenv");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
-const mongoose = require= require("mongoose");
-const auth = require('./routes/auth');
+import express from "express";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import mongoose from "mongoose";
+import authRoute from "./routes/auth.js";
 
 const app = express();
 dotenv.config();
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
-app.use("/api",route)
+app.use("/api", authRoute);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
