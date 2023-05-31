@@ -3,7 +3,8 @@ import User from "../models/user.js";
 import { createError } from "../utils/err.js";
 export const signUp = async (req, res, next) => {
 
-  try {  console.log(req.body)
+  try {  
+    console.log(req.body)
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
 
