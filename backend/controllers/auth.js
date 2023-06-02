@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import User from "../models/user.js";
 import { createError } from "../utils/err.js";
+import jwt from "jsonwebtoken";
 export const signUp = async(req, res, next) => {
     try {
         const salt = bcrypt.genSaltSync(10);
@@ -8,7 +9,6 @@ export const signUp = async(req, res, next) => {
 
         const newUser = new User({
             ...req.body,
-            git
             password: hash,
         });
 
