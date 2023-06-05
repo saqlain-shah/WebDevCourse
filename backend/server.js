@@ -27,6 +27,8 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api", authRoute);
+app.use("/api/users", usersRoute);
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
