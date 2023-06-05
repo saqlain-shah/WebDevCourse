@@ -1,13 +1,13 @@
-// import React from 'react';
+ import React from 'react';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoginPage from './component/loginFormpage';
 import RegistrationForm from './component/registrationForm';
-import SuccessfulPage from "./component/successfulPage";
+import SuccessfulPage from './component/successfulPage';
 
 const App = () => {
-  return (<><BrowserRouter>
+  return (<BrowserRouter>
     <Routes>
       <Route path="/" element={<registrationForm />} />
       <Route index element={<LoginPage />} />
@@ -16,8 +16,7 @@ const App = () => {
       <Route path="LoginPage" element={<LoginPage />} />
       <Route path="SuccessfulPage" element={<SuccessfulPage />} />
     </Routes>
-  </BrowserRouter><>
-    </></>
+  </BrowserRouter>
   );
 };
 export default App;
