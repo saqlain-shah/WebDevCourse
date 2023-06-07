@@ -13,7 +13,7 @@ export const Requests = async (req, res, next) => {
 };export const updateUser = async (req, res, next) => {
     try {
       const updatedUser = await User.findByIdAndUpdate(
-        req.query.id,
+        req.params.id,
         { $set: req.body },
         { new: true }
       );
