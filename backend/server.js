@@ -4,6 +4,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
+import userRoute from "./routes/userRouth.js";
+// import hotelRoute from "./routes/hotel.js";
+
 
 dotenv.config();
 
@@ -27,7 +30,9 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
-app.use("/api", authRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
+// app.use("/api/hotel", hotelRoute);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
