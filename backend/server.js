@@ -4,6 +4,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
+import userRouth from"./routes/userRoute.js";
+// import userRouth from"./routes/hotel.js";
+import hotelRouth from "./routes/hotel.js";
+import roomRouth from "./models/room.js";
 
 const app = express();
 dotenv.config();
@@ -25,8 +29,11 @@ mongoose.connection.on("disconnected", () => {
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
-
-app.use("/api", authRoute);
+//user
+app.use("/api/auth", authRoute);
+app.use("/api/user",userRouth);
+app.use("/api/hotel",hotelRouth);
+app.use("/api/room",roomRouth);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
