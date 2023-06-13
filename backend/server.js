@@ -8,6 +8,7 @@ import userRouth from"./routes/userRoute.js";
 // import userRouth from"./routes/hotel.js";
 import hotelRouth from "./routes/hotel.js";
 import roomRouth from "./models/room.js";
+import bookingRouth from "./routes/booking.js"
 
 const app = express();
 dotenv.config();
@@ -34,6 +35,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/user",userRouth);
 app.use("/api/hotel",hotelRouth);
 app.use("/api/room",roomRouth);
+app.use("/api/booking",bookingRouth);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";

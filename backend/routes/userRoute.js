@@ -6,16 +6,17 @@ import {
   getUsers,
   Requests,
 } from "../controllers/userController.js";
+import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 //UPDATE
-router.post("/:id", Requests);
-router.put("/:id", updateUser);
-router.put("/", updateUser);
+router.post("/:id",verifyAdmin, Requests);
+router.put("/:id",verifyAdmin, updateUser);
+router.put("/",verifyAdmin, updateUser);
 //DELETE
-router.delete("/:id", deleteUser);
+router.delete("/:id",verifyAdmin, deleteUser);
 //GET
-router.get("/:id", getUser);
+router.get("/:id",verifyAdmin, getUser);
 //GET ALL
-router.get("/", getUsers);
+router.get("/",verifyAdmin,getUsers);
 export default router;
