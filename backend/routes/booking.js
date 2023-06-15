@@ -7,13 +7,13 @@ const router = express.Router();
 router.post("/", verifyUser , booking);
 
 // //Booking List
-router.get("/list", verifyUser, bookingList);
+router.get("/", verifyUser, bookingList);
 
 // //Search Booking By Id
- router.get("search/:id", verifyUser, bookingSearch);
+ router.get("/:id", verifyUser, bookingSearch);
 
 // //Check Out
-router.delete("/checkout/:id", verifyUser, checkOut);
+router.delete("/:id", verifyUser, checkOut);
 
 export default router;
 
