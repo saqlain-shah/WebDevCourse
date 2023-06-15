@@ -11,16 +11,16 @@ import {
 
 const router = express.Router();
 //CREATE
-router.post("/",verifyAdmin, createRoom);
+router.post("/",createRoom);
 //UPDATE
-router.put("/:id",verifyAdmin, updateRoomAvailability);
-router.put("/:id",verifyAdmin,  updateRoom);
+router.put("/:id",updateRoomAvailability);
+router.put("/:id", updateRoom);
 //DELETE
-router.delete("/:id",verifyAdmin ,deleteRoom);
+router.delete("/:id",deleteRoom);
 //GET
-router.get("/:id",verifyAdmin,getRoom);
+router.get("/:id",getRoom);
 //GET ALL
-router.get("/",verifyAdmin,getRooms);
+router.get("/",getRooms);
 
 export default router;
 

@@ -7,7 +7,8 @@ import authRoute from "./routes/auth.js";
 import userRouth from"./routes/userRoute.js";
 // import userRouth from"./routes/hotel.js";
 import hotelRouth from "./routes/hotel.js";
-import roomRouth from "./models/room.js";
+// import roomRouth from "./models/room.js";
+import roomRouth from "./routes/room.js";
 import bookingRouth from "./routes/booking.js"
 
 const app = express();
