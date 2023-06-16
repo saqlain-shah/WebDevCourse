@@ -26,7 +26,7 @@ export default function CustomForm() {
 
             <TextField
                 id="outlined-basic"
-                label="Outlined"
+                label="User Name"
                 variant="outlined"
                 name="userName"
                 value={userName}
@@ -38,7 +38,7 @@ export default function CustomForm() {
             />
             <TextField
                 id="outlined-basic"
-                label="Outlined"
+                label="Email "
                 variant="outlined"
                 name="email"
                 value={email}

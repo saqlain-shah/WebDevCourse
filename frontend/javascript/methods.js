@@ -22,13 +22,15 @@ let traineeString = trainees.join(", "); // Convert array to a string separated 
 console.log("\n Apply join  ");
 console.log(traineeString);
 
-let slicedTraineeString = traineeString.slice(7, 16); // Slice a part of the string
+let slicedTraineeString = traineeString.slice(16, 8); // Slice a part of the string
 console.log("\n Apply slice");
 console.log(slicedTraineeString);
 
 let substringTraineeString = traineeString.substring(0, 5); // Get a substring of the string
 console.log("\n Apply substring");
 console.log(substringTraineeString);
+
+
 
 let replacedTraineeString = traineeString.replace("aliya", "Aliya Ejaz"); // Replace a string with another string
 console.log("\n Apply replace  ");
