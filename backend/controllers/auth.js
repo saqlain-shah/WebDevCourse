@@ -22,6 +22,7 @@ export const signUp = async (req, res, next) => {
 
   export const signIn= async (req, res, next) => {
     try {
+
       const user = await User.findOne({ username: req.body.username });
       if (!user) return next(createError(404, "User not found!"));
   
@@ -43,7 +44,8 @@ export const signUp = async (req, res, next) => {
           httpOnly: true,
         })
         .status(200)
-        .json({ details: { ...otherDetails }, isAdmin });
+        .send("User Has been Login Sucessfully");
+       // .json({ details: { ...otherDetails }, isAdmin });
     } catch (err) {
       next(err);
     }

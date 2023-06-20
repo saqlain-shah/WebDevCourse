@@ -1,3 +1,4 @@
+
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -9,6 +10,8 @@ import userRouth from"./routes/userRoute.js";
 import hotelRouth from "./routes/hotel.js";
 // import roomRouth from "./models/room.js";
 import roomRouth from "./routes/room.js";
+// const authRoutes = require('./routes/auth');
+
 import bookingRouth from "./routes/booking.js"
 
 const app = express();
