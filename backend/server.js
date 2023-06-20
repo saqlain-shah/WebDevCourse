@@ -8,6 +8,7 @@ import userRoute from "./routes/userRoutes.js";
 import hotelsRoute from "./routes/hotelRoutes.js";
 import roomsRoute from "./routes/roomsRoutes.js";
 import bookingsRoute from "./routes/bookingsRoutes.js";
+import fileRoutes from "./routes/fileRoutes.js";
 // import cookieParser from "cookie-parser";
 // import cors from "cors";
 
@@ -41,6 +42,7 @@ app.use("/api/user", userRoute);
 app.use("/api/hotels", hotelsRoute);
 app.use("/api/rooms", roomsRoute);
 app.use("/api/bookings", bookingsRoute);
+app.use("/api/file", fileRoutes);
 
 
 
