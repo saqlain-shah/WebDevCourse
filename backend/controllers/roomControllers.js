@@ -1,6 +1,6 @@
 import Room from "../models/roomModels.js";
 import Hotel from "../models/hotelModels.js";
-//import { createError } from "../utils/error.js";
+import { createError } from "../utils/err.js";
 
 export const createRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;

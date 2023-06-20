@@ -30,7 +30,9 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/userRoute.js";
 import hotelsRoute from "./routes/hotelRoutes.js";
-import roomsRoute from "./models/roomModels.js";
+import roomsRoute from "./routes/roomRoutes.js";
+import bookingRoute from "./routes/booking.js";
+import fileRoute from "./routes/fileRoute.js";
  
 
 const app = express();
@@ -66,8 +68,10 @@ app.use(express.json());
 
 app.use("/api/auth",authRoute)
 app.use("/api/user",usersRoute)
-app.use("/api/hotel",hotelsRoute)
+app.use("/api/hotel",hotelsRoute)   
 app.use("/api/room",roomsRoute)
+app.use("/api/booking",bookingRoute)
+app.use("/api/file",fileRoute)
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!";
