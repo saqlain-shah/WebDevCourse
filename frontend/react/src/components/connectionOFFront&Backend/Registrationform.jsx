@@ -1,94 +1,162 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { TextField, Button } from '@mui/material';
 import axios from 'axios';
-const RegistrationForm = () => {
-  const [username, setUsername] = useState('');
+
+const  RegistrationForm = () => {
+  const [username, setusername] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const userData = {
-        username: username,
-        email: email,
-        password: password
-      };
+  const handleusernameChange = (event) => {
+    setusername(event.target.value);
+  };
 
-      console.log(userData)
-  
-      axios.post('http://localhost:8800/api/auth/sign-up', userData)
-        .then(response => {
-          // Handle success response
-          console.log(response.data);
-        })
-        .catch(error => {
-          // Handle error response
-          console.error(error);
-        });
-    // Perform form submission logic, e.g., send data to server
-    
-    // Reset form fields
-    setUsername('');
-    setEmail('');
-    setPassword('');
+  const handlePhoneChange = (event) => {
+    setPhone(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:8800/api/auth/sign-up', {
+        username,
+        phone,
+        email,
+        password,
+      });
+
+      // Handle the response from the backend if needed
+      console.log(response.data);
+    } catch (error) {
+      // Handle any error that occurs during the request
+      console.error(error);
+    }
   };
 
   return (
-    <div>
-      <h2>Registration Form</h2>
+    <div className="account-form">
+      <h2>Registration</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required /><br /><br />
-        
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required /><br /><br />
-        
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required /><br /><br />
-        
-        <input type="submit" value="Register" />
+        <TextField
+          id="username"
+          label="Username"
+          value={username}
+          onChange={handleusernameChange}
+          required
+          width="50px"
+          margin="normal"
+        />
+        <br />
+        <TextField
+          id="phone"
+          label="Phone"
+          value={phone}
+          onChange={handlePhoneChange}
+          required
+          width="70px"
+          margin="normal"
+        />
+        <br />
+        <TextField
+          id="email"
+          label="Email"
+          type="email"
+          value={email}
+          onChange={handleEmailChange}
+          required
+          width="50px"
+          margin="normal"
+        />
+        <br />
+        <TextField
+          id="password"
+          label="Password"
+          type="password"
+          value={password}
+          onChange={handlePasswordChange}
+          required
+          width="90px"
+          margin="normal"
+        />
+        <br />
+        <Button type="submit" variant="contained" color="primary">
+                Register
+        </Button>
       </form>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default RegistrationForm;
 
 
 // import React, { useState } from 'react';
-// import axios from 'axios';
+// import { Button, TextField, Typography } from '@mui/material';
+// import axios from "axios"
+// const LoginForm = () => {
+//     const [values, setValues] = useState({
+//         username: "",
+//         password: ""
+//     });
 
-// const RegistrationForm = () => {
-//   const [username, setUsername] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-    
-//     const userData = {
-//       username: username,
-//       email: email,
-//       password: password
+//     const handleSubmit = async (e) => {
+//         e.preventDefault();
+
+//         try {
+//             const response = await axios.post('http://localhost:8800/api/sign-in', values);
+//             // Handle successful login response here
+//             console.log(response.data);
+//         } catch (error) {
+//             // Handle error here
+//             console.error(error);
+//         }
 //     };
 
-//     axios.post('/api/register', userData)
-//       .then(response => {
-//         // Handle success response
-//         console.log(response.data);
-//       })
-//       .catch(error => {
-//         // Handle error response
-//         console.error(error);
-//       });
+//     return (
+//         <React.Fragment>
 
-//     // Reset form fields
-//     setUsername('');
-//     setEmail('');
-//     setPassword('');
-//   };
-
-//   // ... Rest of the component code
+//             <form onSubmit={handleSubmit}>
+//                 <Typography variant="h6" gutterBottom>
+//                     Login
+//                 </Typography>
+//                 <TextField
+//                     label="Username"
+//                     type="username"
+//                     value={values.username}
+//                     onChange={(e) => setValues(e.target.value)}
+//                     fullWidth
+//                     margin="normal"
+//                     required
+//                 />
+//                 <TextField
+//                     label="Password"
+//                     type="password"
+//                     value={values.password}
+//                     onChange={(e) => setValues(e.target.value)}
+//                     fullWidth
+//                     margin="normal"
+//                     required
+//                 />
+//                 <Button type="submit" variant="contained" color="primary">
+//                     Login
+//                 </Button>
+//             </form>
+//         </React.Fragment>
+//     )
 // };
 
-// export default RegistrationForm;
+
+
+
+// export default LoginForm;
